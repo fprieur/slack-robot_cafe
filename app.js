@@ -6,6 +6,7 @@ var port = process.env.PORT || 3000;
 
 var hellobot = require('./hellobot');
 var baklava = require('./baklava');
+var docDocker = require('./docDocker');
 
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
