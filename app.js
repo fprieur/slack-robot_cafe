@@ -16,7 +16,7 @@ app.get('/', function (req, res) { res.status(200).send('Hello world!') });
  
 app.post('/hello', hellobot);
 app.get('/baklava', baklava);
-app.get('/docDocker', docDocker);
+app.post('/docDocker', docDocker);
 
 // error handler
 app.use(function (err, req, res, next) {
