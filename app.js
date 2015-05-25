@@ -5,6 +5,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var hellobot = require('./hellobot');
+var baklava = require('./baklava');
 
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
  
 app.post('/hello', hellobot);
+app.get('/baklava', baklava);
 
 // error handler
 app.use(function (err, req, res, next) {
